@@ -20,7 +20,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='MHC-CodeSmith',
-    maintainer_email='mhc@labrom.ic',
+    maintainer_email='carvalho.matheush@gmail.com',
     description='Unitree G1 Hand Tracking & Teleop Package',
     license='Apache-2.0',
     entry_points={

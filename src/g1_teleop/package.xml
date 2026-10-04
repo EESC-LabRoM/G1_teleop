@@ -4,7 +4,7 @@
   <name>g1_teleop</name>
   <version>0.1.0</version>
   <description>ROS 2 package for Unitree G1 3D hand tracking and teleoperation using RealSense and MediaPipe body frame.</description>
-  <maintainer email="mhc@labrom.ic">MHC-CodeSmith</maintainer>
+  <maintainer email="carvalho.matheush@gmail.com">MHC-CodeSmith</maintainer>
   <license>Apache-2.0</license>
 
   <depend>rclpy</depend>
