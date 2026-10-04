@@ -1,59 +1,46 @@
-# H_G1 — RealSense 3D Hand Tracking & RViz2 Visualization no Docker (ROS 2 Humble)
+# G1 hand tracking and RViz visualization
 
-Este repositório contém a infraestrutura em **Docker** com **ROS 2 Humble** para o rastreamento 3D da mão do operador usando a câmera **RealSense D435/D435i** e a publicação direta da TF do pulso (`hand_wrist_target`) no **RViz2**.
+This ROS 2 Humble project adapts the body-relative wrist tracking pipeline from the LabRoM Spot teleoperation work to a Unitree G1 model and a RealSense RGB-D camera. The current end-to-end scope is right-wrist tracking, a torso-relative target TF, and position-only right-arm inverse kinematics shown in RViz.
 
----
+**This repository does not send commands to a physical G1.** The IK node publishes a private visualization joint-state topic for `robot_state_publisher`; it has no Unitree SDK/controller integration. Hand orientation and gesture nodes publish estimates, but they are not consumed by the arm IK or a gripper controller.
 
-## 🐳 Execução via Docker (Recomendado)
+## What runs
 
-Todo o ambiente ROS 2, drivers da RealSense, MediaPipe, OpenCV e RViz2 estão pré-configurados no Dockerfile.
+`g1_wrist_realsense.launch.py` starts the RealSense driver (unless disabled), `wrist_detector`, `g1_arm_ik_node`, `robot_state_publisher`, RViz, and optional gesture/orientation estimators. The detector uses MediaPipe Pose right-wrist landmark 16, synchronized color and aligned depth, camera intrinsics, and a body frame estimated from pose landmarks. It publishes `/wrist_pose` and the `torso_link -> wrist_target` TF. The IK node follows that target with the seven right-arm joints and publishes all movable joints on `/g1_visualization/joint_states`; robot state publisher consumes this topic to provide the robot TF tree.
 
-### 1. Permitir acesso ao Display (X11) e rodar o Docker:
+The transfer from a human arm to the robot arm is an approximate scaled mapping. The launch derives the robot shoulder location and a reach estimate from the chosen URDF, and sets the initial human-to-robot scale to `reach / 0.65 m`. The detector also has optional online arm-length estimation. These values need calibration for the operator, camera placement, and desired G1 workspace. Target coordinates are torso-relative; this is not a camera-frame-to-joint direct mapping.
 
-```bash
-cd /home/mhc/IC/H_G1
-chmod +x run_docker.sh
-./run_docker.sh
-```
+## Run
 
-Ou usando `docker compose` diretamente:
+The provided Docker setup expects the LabRoM base image `spot_ros2:latest` to exist locally. Build the image and launch the container using the repository's Docker configuration. With the ROS workspace sourced, the launch command is:
 
 ```bash
-xhost +local:root
-docker compose up --build
+ros2 launch g1_teleop g1_wrist_realsense.launch.py
 ```
 
----
+Choose the URDF variant that matches the actual G1 hardware. For example:
 
-## 📁 Estrutura de Arquivos no Repositório
-
-```text
-H_G1/
-├── Dockerfile                             # Ambiente ROS 2 Humble + RealSense + MediaPipe + RViz2
-├── docker-compose.yml                     # Configuração com suporte a USB da RealSense e X11 (GUI)
-├── run_docker.sh                          # Script auxiliar para liberar X11 e subir o contêiner
-├── README.md
-└── src/
-    └── g1_teleop/
-        ├── config/
-        │   └── g1_phase1.rviz             # RViz2 configurado com Fixed Frame = camera_color_optical_frame
-        ├── g1_teleop/
-        │   ├── __init__.py
-        │   ├── hand_tracker_node.py       # Nó de percepção: RealSense RGB + Depth + MediaPipe Pose -> TF do pulso
-        │   ├── hand_orientation_estimator.py# Estimador de orientação da mão
-        │   └── finger_count.py            # Contador de dedos / gestos da mão
-        ├── launch/
-        │   └── g1_teleop_phase1.launch.py # Launch file para percepção + RViz2
-        ├── package.xml
-        ├── setup.cfg
-        └── setup.py
+```bash
+ros2 launch g1_teleop g1_wrist_realsense.launch.py model:=g1_29dof_rev_1_0.urdf
 ```
 
----
+Other installed models are listed in `src/g1_teleop/urdf/`. `camera:=false` disables the camera driver, and `show_window:=false` disables the OpenCV preview. The launch defaults to `g1_29dof_rev_1_0.urdf`; the model must contain `torso_link`, `right_shoulder_pitch_joint`, and a seven-joint chain ending at `right_wrist_yaw_link`.
 
-## 🎯 O que o Docker faz ao subir:
-1. Compila o pacote `g1_teleop` automaticamente dentro do contêiner (`colcon build`).
-2. Conecta à câmera RealSense via repasse USB (`/dev/bus/usb`).
-3. Rastreia o pulso direito em 3D sem ArUco via MediaPipe Pose.
-4. Publica a TF `camera_color_optical_frame -> hand_wrist_target` e o marcador visual (`Marker`).
-5. Abre a interface gráfica do **RViz2** na tela do host via repasse X11!
+## Topics and frames
+
+- Inputs: `/camera/camera/color/image_raw`, `/camera/camera/aligned_depth_to_color/image_raw`, `/camera/camera/color/camera_info`.
+- Wrist target: `/wrist_pose` (`geometry_msgs/PoseStamped`, in `torso_link`).
+- Target TF: `torso_link -> wrist_target`.
+- Visualization joint states: `/g1_visualization/joint_states`.
+- Arm target orientation is currently ignored by the position-only IK.
+
+## Dependencies and verification
+
+The package is built with `colcon` in ROS 2 Humble. The Dockerfile uses the `spot_ros2:latest` image and installs Python dependencies, including MediaPipe. Build with:
+
+```bash
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install --packages-select g1_teleop
+```
+
+The RealSense device and an X11-capable display are needed to verify the full live camera and RViz experience. `camera:=false` is useful for checking the robot visualization pipeline without a camera, but no physical arm control is implemented.

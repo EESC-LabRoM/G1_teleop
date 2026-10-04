@@ -26,7 +26,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/pelvis_ver0529.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/pelvis_ver0529.STL"/>
       </geometry>
       <material name="dark"/>
     </visual>
@@ -42,14 +42,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_hip_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_hip_pitch_link.STL"/>
       </geometry>
       <material name="dark"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_hip_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_hip_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -69,14 +69,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_hip_roll_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_hip_roll_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_hip_roll_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_hip_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -96,14 +96,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_hip_yaw_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_hip_yaw_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_hip_yaw_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_hip_yaw_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -123,14 +123,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_knee_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_knee_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_knee_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_knee_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -150,14 +150,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_ankle_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_ankle_pitch_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_ankle_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_ankle_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -177,7 +177,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_ankle_roll_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_ankle_roll_link.STL"/>
       </geometry>
       <material name="dark"/>
     </visual>
@@ -222,14 +222,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_hip_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_hip_pitch_link.STL"/>
       </geometry>
       <material name="dark"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_hip_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_hip_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -249,14 +249,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_hip_roll_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_hip_roll_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_hip_roll_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_hip_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -276,14 +276,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_hip_yaw_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_hip_yaw_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_hip_yaw_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_hip_yaw_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -303,14 +303,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_knee_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_knee_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_knee_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_knee_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -330,14 +330,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_ankle_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_ankle_pitch_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_ankle_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_ankle_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -357,7 +357,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_ankle_roll_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_ankle_roll_link.STL"/>
       </geometry>
       <material name="dark"/>
     </visual>
@@ -404,7 +404,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/waist_yaw_link_rev_1_0.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/waist_yaw_link_rev_1_0.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -425,7 +425,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/waist_roll_link_rev_1_0.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/waist_roll_link_rev_1_0.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -446,14 +446,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/torso_link_rev_1_0.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/torso_link_rev_1_0.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/torso_link_rev_1_0.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/torso_link_rev_1_0.STL"/>
       </geometry>
     </collision>
   </link>
@@ -480,14 +480,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/logo_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/logo_link.STL"/>
       </geometry>
       <material name="dark"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/logo_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/logo_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -502,14 +502,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/head_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/head_link.STL"/>
       </geometry>
       <material name="dark"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/head_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/head_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -561,7 +561,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_shoulder_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_shoulder_pitch_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -588,7 +588,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_shoulder_roll_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_shoulder_roll_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -615,14 +615,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_shoulder_yaw_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_shoulder_yaw_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_shoulder_yaw_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_shoulder_yaw_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -642,14 +642,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_elbow_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_elbow_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_elbow_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_elbow_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -676,14 +676,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_wrist_roll_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_wrist_roll_link_5010.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_wrist_roll_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_wrist_roll_link_5010.STL"/>
       </geometry>
     </collision>
   </link>
@@ -703,14 +703,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_wrist_pitch_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_wrist_pitch_link_5010.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_wrist_pitch_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_wrist_pitch_link_5010.STL"/>
       </geometry>
     </collision>
   </link>
@@ -730,14 +730,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_wrist_yaw_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_wrist_yaw_link_5010.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_wrist_yaw_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_wrist_yaw_link_5010.STL"/>
       </geometry>
     </collision>
   </link>
@@ -755,7 +755,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/left_rubber_hand.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/left_rubber_hand.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -771,7 +771,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_shoulder_pitch_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_shoulder_pitch_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -798,7 +798,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_shoulder_roll_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_shoulder_roll_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -825,14 +825,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_shoulder_yaw_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_shoulder_yaw_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_shoulder_yaw_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_shoulder_yaw_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -852,14 +852,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_elbow_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_elbow_link.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_elbow_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_elbow_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -886,14 +886,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_wrist_roll_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_wrist_roll_link_5010.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_wrist_roll_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_wrist_roll_link_5010.STL"/>
       </geometry>
     </collision>
   </link>
@@ -913,14 +913,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_wrist_pitch_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_wrist_pitch_link_5010.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_wrist_pitch_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_wrist_pitch_link_5010.STL"/>
       </geometry>
     </collision>
   </link>
@@ -940,14 +940,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_wrist_yaw_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_wrist_yaw_link_5010.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_wrist_yaw_link_5010.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_wrist_yaw_link_5010.STL"/>
       </geometry>
     </collision>
   </link>
@@ -965,7 +965,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/right_rubber_hand.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/right_rubber_hand.STL"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -989,7 +989,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/Dex1_base_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/Dex1_base_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.79216 0.81961 0.93333 1"/>
@@ -998,7 +998,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/Dex1_base_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/Dex1_base_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1011,7 +1011,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/Dex1_finger_link_1.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/Dex1_finger_link_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.41176 0.41176 0.41176 1"/>
@@ -1020,7 +1020,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/dex1_col_1.stl"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/dex1_col_1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1040,7 +1040,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/Dex1_finger_link_2.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/Dex1_finger_link_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.89804 0.91765 0.92941 1"/>
@@ -1049,7 +1049,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/dex1_col_2.stl"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/dex1_col_2.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1075,7 +1075,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/Dex1_base_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/Dex1_base_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.79216 0.81961 0.93333 1"/>
@@ -1084,7 +1084,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/Dex1_base_link.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/Dex1_base_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1097,7 +1097,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/Dex1_finger_link_1.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/Dex1_finger_link_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.41176 0.41176 0.41176 1"/>
@@ -1106,7 +1106,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/dex1_col_1.stl"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/dex1_col_1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1126,7 +1126,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/Dex1_finger_link_2.STL"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/Dex1_finger_link_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.89804 0.91765 0.92941 1"/>
@@ -1135,7 +1135,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="meshes/dex1_col_2.stl"/>
+        <mesh filename="package://g1_teleop/urdf/meshes/dex1_col_2.stl"/>
       </geometry>
     </collision>
   </link>

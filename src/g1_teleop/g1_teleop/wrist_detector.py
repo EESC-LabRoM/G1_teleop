@@ -87,11 +87,11 @@ class WristDetector(Node):
         self.wrist_color = tuple(color_param)
         self.tag_size = self.get_parameter('apriltag_size').value
         
-        # Scale factor to compensate human arm vs Spot arm length
-        # Spot arm reach: ~984mm, Human arm (shoulder to wrist): ~650mm
+        # Scale factor to map the human wrist displacement to the robot arm.
+        # The G1 launch overrides these estimates from the selected URDF.
         # Used at startup and as fallback when online estimation is disabled
         # or has not converged yet.
-        self.declare_parameter('scale_factor', 984.0 / 650.0)
+        self.declare_parameter('scale_factor', 0.41 / 0.65)
         self.scale_factor = self.get_parameter('scale_factor').value
 
         # Online arm-length estimation: estimate the operator's arm length as
@@ -99,17 +99,15 @@ class WristDetector(Node):
         # pose-invariant (rigid segments), so no calibration pose is needed.
         self.declare_parameter('online_scale_estimation', True)
         self.online_scale_estimation = self.get_parameter('online_scale_estimation').value
-        self.declare_parameter('robot_reach', 0.984)  # Spot arm reach in meters
+        self.declare_parameter('robot_reach', 0.41)  # Approximate G1 shoulder-to-wrist reach in meters
         self.robot_reach = self.get_parameter('robot_reach').value
         
         # Output frame for wrist pose (robot's body frame)
         self.declare_parameter('output_frame', 'body')
         self.output_frame = self.get_parameter('output_frame').value
         
-        # Shoulder offset: offset from body to arm_link_sh0 in body frame (REP-103: X=forward, Y=left, Z=up)
-        # From URDF: arm_sh0 is at xyz="0.292 0.0 0.188" relative to body
-        # Set to [0,0,0] to disable offset, or [0.292, 0.0, 0.188] to reference from shoulder
-        self.declare_parameter('shoulder_offset', [0.292, 0.0, 0.188])
+        # Offset from torso_link to the right shoulder in REP-103 coordinates.
+        self.declare_parameter('shoulder_offset', [0.004, -0.100, 0.248])
         self.shoulder_offset = np.array(self.get_parameter('shoulder_offset').value)
         
         # Publisher for wrist pose in body frame
@@ -221,7 +219,7 @@ class WristDetector(Node):
         self.get_logger().info(f'Max landmark velocity: {self.max_landmark_velocity:.2f} m/s')
         self.get_logger().info(f'Wrist jump threshold: {self.wrist_jump_threshold*100:.1f} cm/frame')
         self.get_logger().info(f'Axis jump threshold: {np.degrees(self.axis_jump_threshold):.1f} deg/frame')
-        self.get_logger().info(f'Scale factor (human to Spot arm): {self.scale_factor:.3f}')
+        self.get_logger().info(f'Scale factor (human to G1 arm): {self.scale_factor:.3f}')
         self.get_logger().info(
             f'Online scale estimation: {self.online_scale_estimation} '
             f'(robot reach: {self.robot_reach:.3f} m)')
